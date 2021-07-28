@@ -14,7 +14,7 @@ while True:
             img = cv2.rectangle(frame, (x,y), (x+w, y+h), (255,0,5), 1)
             img[y: y+h, x:x+w] = cv2.medianBlur(img[y:y+h, x:x+w], 25)
 
-        cv2.imshow('Video Frame',img)
+        cv2.imshow('Video Frame',frame)
 
         k = cv2.waitKey(1)
         if k == ord('q'):
